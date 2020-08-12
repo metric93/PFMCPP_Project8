@@ -45,6 +45,13 @@ your task:
 #include <algorithm>
 #include <cassert>
 
+#include "SemiTruck.h"
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Vehicle.h"
+#include "Motorcycle.h"
+#include "Car.h"
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
