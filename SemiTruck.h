@@ -2,4 +2,4 @@
 
 #include "Vehicle.h"
 
-struct SemiTruck(){};
+struct SemiTruck{};
