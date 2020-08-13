@@ -47,11 +47,11 @@ void Highway::removeVehicleInternal(Vehicle* v)
     {
         carPointer->tryToEvade();
     }
-    if(auto* motorcyclePointer = dynamic_cast<Motorcycle*>(v)
+    if(auto* motorcyclePointer = dynamic_cast<Motorcycle*>(v))
     {
-        motorcyclePointer->tryToEvade()
+        motorcyclePointer->tryToEvade();
     }
-    if(auto* truckPointer = dynamic_cast<SemiTruck*>(truckPointer))
+    if(auto* truckPointer = dynamic_cast<SemiTruck*>(v))
     {
         truckPointer->pullOver();
     }
