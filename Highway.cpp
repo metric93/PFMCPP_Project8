@@ -41,7 +41,20 @@ void Highway::addVehicleInternal(Vehicle* v)
 
 void Highway::removeVehicleInternal(Vehicle* v)
 {
-    assert(false);
+    //assert(false);
+
+    if(auto* carPointer = dynamic_cast<Car*>(v))
+    {
+        carPointer->tryToEvade();
+    }
+    if(auto* motorcyclePointer = dynamic_cast<Motorcycle*>(v)
+    {
+        motorcyclePointer->tryToEvade()
+    }
+    if(auto* truckPointer = dynamic_cast<SemiTruck*>(truckPointer))
+    {
+        truckPointer->pullOver();
+    }
 
     /*
     depending on the derived type, call the member function that tries to evade the cops. 
