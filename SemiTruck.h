@@ -2,4 +2,9 @@
 
 #include "Vehicle.h"
 
-struct SemiTruck{};
+struct SemiTruck : public Vehicle
+{
+    SemiTruck(const std::string& s);
+
+    void tailgate( int distance);
+};

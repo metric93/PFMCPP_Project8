@@ -1,4 +1,9 @@
 #include "Highway.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+
+struct Vehicle;
 
 #include <cassert>
 
@@ -18,6 +23,20 @@ void Highway::addVehicleInternal(Vehicle* v)
     /*
     depending on the derived type, call the member function that doesn't evade the cops. 
     */
+    //Check if the Vehicle Pointer v can be converted to a carPointer
+    if (auto* carPointer = dynamic_cast<Car*>(v))
+    {
+        carPointer->closeWindows();
+    }
+   if (auto* motorcyclePointer = dynamic_cast<Motorcycle*>(v))
+    {
+        motorcyclePointer->lanesplitAndRace(250);
+    }
+    if (auto* truckPointer = dynamic_cast<SemiTruck*>(v))
+    {
+        truckPointer->tailgate(1);
+    }
+
 }
 
 void Highway::removeVehicleInternal(Vehicle* v)
@@ -29,6 +48,7 @@ void Highway::removeVehicleInternal(Vehicle* v)
 
     trucks pull over, but cars and bikes try to evade!!
     */
+    
 }
 
 void Highway::addVehicle(Vehicle* v)

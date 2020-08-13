@@ -116,7 +116,8 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
-    
+    cars.emplace_back("twingo"); 
+    cars.emplace_back("corsa"); 
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
