@@ -1,6 +1,6 @@
 #include "SemiTruck.h"
 
-SemiTruck::SemiTruck(const std::string& s) : Vehicle (s){};
+SemiTruck::SemiTruck(const std::string& s) : Vehicle (s){}
 
 void SemiTruck::tailgate(int distance)
 {
