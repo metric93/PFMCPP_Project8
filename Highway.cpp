@@ -18,7 +18,7 @@ void Highway::changeSpeed(int newSpeed)
 
 void Highway::addVehicleInternal(Vehicle* v)
 {
-    assert(false);
+    //assert(false);
 
     /*
     depending on the derived type, call the member function that doesn't evade the cops. 
