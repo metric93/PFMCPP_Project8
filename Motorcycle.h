@@ -7,6 +7,12 @@
 struct Motorcycle : public Vehicle
 {
     Motorcycle(const std::string& n);
+
+    //in-place construction from vehicle
+    ~Motorcycle() override;
+    Motorcycle(const Motorcycle&) = default;
+    Motorcycle& operator=(const Motorcycle&) = default;
+   
     
     void lanesplitAndRace( int topSpeed = std::numeric_limits<int>::max() );
     
