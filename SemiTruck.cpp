@@ -1,4 +1,5 @@
 #include "SemiTruck.h"
+#include <iostream>
 
 SemiTruck::SemiTruck(const std::string& s) : Vehicle (s){}
 

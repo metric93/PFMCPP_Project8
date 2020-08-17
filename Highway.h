@@ -2,8 +2,10 @@
 
 #include <vector>
 #include <algorithm>
-#include "Vehicle.h"
-#include "HighwayPatrol.h"
+//#include "Vehicle.h"
+//#include "HighwayPatrol.h"
+struct Vehicle;
+struct HighwayPatrol;
 
 struct Highway
 {

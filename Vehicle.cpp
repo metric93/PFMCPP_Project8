@@ -1,4 +1,5 @@
 #include "Vehicle.h"
+#include <iostream>
 
 Vehicle::Vehicle(const std::string& n) : name(n) { }
 

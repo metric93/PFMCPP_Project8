@@ -138,21 +138,21 @@ int main()
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
 
-    for (Car& c : cars) //Reference tot he Car in the Vector
+    for (auto& c : cars) //Reference tot he Car in the Vector
     {
-        std::cout << &c << std::endl; //Adress of the Car in the Vector
+        //std::cout << &c << std::endl; //Adress of the Car in the Vector
         highway.addVehicle(&c); //Dereferencing c
     }
 
-    for (Motorcycle& m : motorcycles) //Reference tot he Car in the Vector
+    for (auto& m : motorcycles) //Reference tot he Car in the Vector
     {
-        std::cout << &m << std::endl; //Adress of the Car in the Vector
+        //std::cout << &m << std::endl; //Adress of the Car in the Vector
         highway.addVehicle(&m); //Dereferencing c
     }
 
-    for (SemiTruck& t : trucks) //Reference tot he Car in the Vector
+    for (auto& t : trucks) //Reference tot he Car in the Vector
     {
-        std::cout << &t << std::endl; //Adress of the Car in the Vector
+        //std::cout << &t << std::endl; //Adress of the Car in the Vector
         highway.addVehicle(&t); //Dereferencing c
     }
 
