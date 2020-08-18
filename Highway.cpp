@@ -3,10 +3,10 @@
 #include "Car.h"
 #include "Motorcycle.h"
 #include "SemiTruck.h"
+#include <algorithm>
 
 struct Vehicle;
 
-#include <cassert>
 
 void Highway::changeSpeed(int newSpeed)
 {
