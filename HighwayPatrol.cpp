@@ -1,10 +1,13 @@
-#include "HighwayPatrol.h"
 #include <iostream>
+#include "HighwayPatrol.h"
+#include "Highway.h"
 
 HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
 {
 
 }
+
+HighwayPatrol::~HighwayPatrol() = default;
 
 void HighwayPatrol::scanHighway(Highway* h)
 {

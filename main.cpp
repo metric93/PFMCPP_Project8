@@ -45,6 +45,13 @@ your task:
 #include <algorithm>
 #include <cassert>
 
+#include "SemiTruck.h"
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Vehicle.h"
+#include "Motorcycle.h"
+#include "Car.h"
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -109,17 +116,46 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
-    
+    cars.emplace_back("twingo"); 
+    cars.emplace_back("corsa"); 
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
+    motorcycles.reserve(4);
+    motorcycles.emplace_back("yamaha");
+    motorcycles.emplace_back("rocker");
+    motorcycles.emplace_back("hellsangel");
+    motorcycles.emplace_back("vespa");
+
+    trucks.reserve(3);
+    trucks.emplace_back("monstertruck");
+    trucks.emplace_back("tinytruck");
+    trucks.emplace_back("fbitruck");
+
     
     
-    
-    
-    assert(false);
+    //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
+
+    for (auto& c : cars) //Reference tot he Car in the Vector
+    {
+        //std::cout << &c << std::endl; //Adress of the Car in the Vector
+        highway.addVehicle(&c); //Dereferencing c
+    }
+
+    for (auto& m : motorcycles) //Reference tot he Car in the Vector
+    {
+        //std::cout << &m << std::endl; //Adress of the Car in the Vector
+        highway.addVehicle(&m); //Dereferencing c
+    }
+
+    for (auto& t : trucks) //Reference tot he Car in the Vector
+    {
+        //std::cout << &t << std::endl; //Adress of the Car in the Vector
+        highway.addVehicle(&t); //Dereferencing c
+    }
+
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
